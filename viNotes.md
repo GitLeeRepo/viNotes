@@ -24,4 +24,4 @@ colorscheme koehler
 
 From within vi type:
 
-`:colorscheme` **space** and then cycle through each one with **tab**.  Simply hit return to set the currently displayed scheme.
+`:colorscheme` **space** and then cycle through each one with **tab**.  Simply hit return to set the currently displayed scheme. Note that schemes selected like this within vi will only apply to the current session.  If you want it to be permanent across sessions then add it to the .vimrc file as described above.
