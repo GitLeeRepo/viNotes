@@ -39,7 +39,7 @@ Note how this config file uses a double quote for a comment
 # vi Modes
 
 * **Command Mode** - for entering commands.  Press **Esc** to enter Command Mode
-* **Insert Mode** - for entering text.  Type **i** to enter Insert Mode
+* **Insert Mode** - for entering text.  Type **i** to enter Insert Mode.  Note there an overstrike version called **replace mode**, but for the purposes of distinguishing behaviors of key strokes, it is **insert mode** that will be contrasted with other modes in these notes.
 * **ex Mode** - technically not a mode, but a separate line editor.  Type **:** (colon) to activate
 
 # Commands
@@ -70,6 +70,8 @@ Note: while you can navigate with the arrow keys, for efficiency you can use sta
 * **$** - move to the end of the line
 * **0** - (zero) move to the beginning of the line
 * **8gg** - move to line 8
+* **^f** - page down
+* **^b** - page up
 
 ## Copy/Paste
 
@@ -90,6 +92,13 @@ Note: while you can navigate with the arrow keys, for efficiency you can use sta
 ### Ex Mode
 
 * **:put** - in **ex Mode** paste the text starting on the next line (saves from having to go in and out **Insert Mode** to open up a new line)
+
+## Moving Text
+
+To move text you first delete it, which places the text in a buffer, and the paste it
+
+**dd** - delete the line or lines with **#dd** that you want to move
+**p** - put the deleted lines at the position after the cursor
 
 ## Undoing Changes
 
@@ -117,6 +126,20 @@ Note: while you can navigate with the arrow keys, for efficiency you can use sta
 * **c0** - from the current position remove text to the beginning of the current line placing you in **insert mode** at the beginning of the line
 * **cc** - replace the entire current line
 * **r** - replace the character under the cursor.  You remain in command mode so you don't need to hit **Esc** afterword
+
+## Inserting Text
+
+* **i** - enter **insert mode**
+* **I** - enter **insert mode** at the start of the line
+* **a** - enter **insert mode** to append text (one character to the right of where the **i** command would have placed you
+* **A** - enter **insert mode** at the end of the line
+* **s** - replace the character under the cursor and enter **insert mode** (**x** replaces without entering **insert mode**
+* **S** - remove the entire line placing you in **insert mode** at the beginning of the line
+* **R** - places you in **replace mode** which is an overstrike version of **insert mode** (note you can toggle back and forth between **insert mode** and **replace mode** with your insert key.
+
+## Joining Lines
+
+* **J** - in **command mode** joins two lines together
 
 ## Repeating Commands
 
