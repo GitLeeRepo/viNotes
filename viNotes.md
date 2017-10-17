@@ -40,13 +40,21 @@ Note how this config file uses a double quote for a comment
 
 * **Command Mode** - for entering commands.  Press **Esc** to enter Command Mode
 * **Insert Mode** - for entering text.  Type **i** to enter Insert Mode
+* **ex Mode** - technically not a mode, but a separate line editor.  Type **:** (colon) to activate
 
 # Commands
 
 ## Saving Files
 
-* **:w** - write file
-* **w filename** - save with the specified filename
+* **:w** - while in **ex mode** saves the file
+* **:w filename** - while in **ex mode** save with the specified filename
+* **:wq** - save and exit while in **ex mode**
+* **ZZ** - save and exit while in **command mode**
+
+## Abandon Changes
+
+* **:q!** - quit without savig while in **ex mode**
+* **:e!** - abandon changes reverting to the original file while in **command mode**
 
 ## Navigation
 
@@ -56,6 +64,12 @@ Note: while you can navigate with the arrow keys, for efficiency you can use sta
 * **k** - move up a line
 * **l** - move right a character
 * **h** - move left a character
+* **H** - move to the top
+* **L** - move to the last
+* **M** - move to the middle of the screen
+* **$** - move to the end of the line
+* **0** - (zero) move to the beginning of the line
+* **8gg** - move to line 8
 
 ## Copy/Paste
 
@@ -66,7 +80,23 @@ Note: while you can navigate with the arrow keys, for efficiency you can use sta
 * Use the navigation keys to select the text that is hightlighted
 * **y** - to copy the selected text (yank)
 * **p** - paste the text at the cursor position
+* **:put** - in **ex Mode** paste the text starting on the next line (saves from having to go in and out **Insert Mode** to open up a new line)
+
+## Command Mode
+
+* **yy** - copy the current line
+* **6yy** - copy the next 6 lines
+* **p** - paste the yanked text at the current position
+* **2p** - repeat the paste 2 times
+
 
 ## Undoing Changes
 
  * **u** - in **command mode** undo last change.  You can type **u** multiple times for multiple levels of undo
+ 
+ ## Deleting Text
+ 
+ * **dd** - deletes the current line while in **command mode**
+ * **6dd** - deletes 6 lines while in **command mode**
+ * **:d** - deletes the current line while in in **ex mode** 
+ * **x** - deletes the character under the cursor while in **command mode**
