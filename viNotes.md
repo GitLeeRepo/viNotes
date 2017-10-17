@@ -78,25 +78,46 @@ Note: while you can navigate with the arrow keys, for efficiency you can use sta
 * Position your cursor where you want to start copying text
 * **v** - in **command mode** to go into **Visual Mode**
 * Use the navigation keys to select the text that is hightlighted
-* **y** - to copy the selected text (yank)
-* **p** - paste the text at the cursor position
-* **:put** - in **ex Mode** paste the text starting on the next line (saves from having to go in and out **Insert Mode** to open up a new line)
+* **y** - to copy the selected text (yank), once yanked you return to **command mode**
 
-## Command Mode
+### Command Mode
 
 * **yy** - copy the current line
 * **6yy** - copy the next 6 lines
 * **p** - paste the yanked text at the current position
 * **2p** - repeat the paste 2 times
 
+### Ex Mode
+
+* **:put** - in **ex Mode** paste the text starting on the next line (saves from having to go in and out **Insert Mode** to open up a new line)
 
 ## Undoing Changes
 
  * **u** - in **command mode** undo last change.  You can type **u** multiple times for multiple levels of undo
  
- ## Deleting Text
+## Deleting Text
  
- * **dd** - deletes the current line while in **command mode**
- * **6dd** - deletes 6 lines while in **command mode**
- * **:d** - deletes the current line while in in **ex mode** 
- * **x** - deletes the character under the cursor while in **command mode**
+### Command mode
+ * **dd** - deletes the current line
+ * **6dd** - deletes 6 lines
+ * **dw** - delete to the end of the word
+ * **d$** - delete to the end of the line
+ * **d0** - delete to the end of the line
+ * **x** - deletes the character under the cursor
+ 
+### Ex mode
+
+* **:d** - deletes the current line 
+* **:d3** - deletes the next 3 lines 
+
+## Changing Text
+
+* **cw** - from the current position remove text to the end of the current word placing you in **insert mode** to type the new text
+* **c$** - from the current position remove text to the end of the current line placing you in **insert mode** to type the new text
+* **c0** - from the current position remove text to the beginning of the current line placing you in **insert mode** at the beginning of the line
+* **cc** - replace the entire current line
+* **r** - replace the character under the cursor.  You remain in command mode so you don't need to hit **Esc** afterword
+
+## Repeating Commands
+
+* **.** - while in **command mode** repeats the prior command
