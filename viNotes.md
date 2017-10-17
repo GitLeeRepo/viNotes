@@ -144,3 +144,13 @@ To move text you first delete it, which places the text in a buffer, and the pas
 ## Repeating Commands
 
 * **.** - while in **command mode** repeats the prior command
+
+## Search of text
+
+* **/pattern** - search forward through the text for the pattern
+* **?pattern** - search backward through the text for the pattern
+* **/** - repeat the search in the forward direction
+* **/** - repeat the search in the backward direction
+* **n** - repeat the search in the same direction
+* **N** - repeat the search in the opposite direction
+
