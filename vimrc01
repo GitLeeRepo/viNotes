@@ -1,0 +1,17 @@
+syntax on
+
+colorscheme koehler
+
+" turn annoying bell off
+set visualbell
+
+" Tabs
+set tabstop=4       " Change tab width. This will impact exiting text
+set shiftwidth=4    " Indent width used by reindent (<< and >>)
+set softtabstop=4   " Width when pressing TAB (if less than tabstops additional
+                    " tabs and spaces will be inserted to equal tabstops
+set expandtab       " Expand TABs to spaces
+set smarttab        " when using spaces instead of tabs, the backspace will
+                    " remove shiftwidth number of spaces, making it appear as
+                    " if there is an actual tab when there is not.  Without
+                    " the backspace removes  single space
