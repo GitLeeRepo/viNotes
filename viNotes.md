@@ -124,7 +124,9 @@ To move text you first delete it, which places the text in a buffer, and the pas
 * **n** - repeat the search in the same direction
 * **N** - repeat the search in the opposite direction
 
-# vimrc
+# vimrc and vi settings
+
+Examples of both .vimrc settings and settings made in the editor **:** mode
 
 ## Changing vim colorscheme
 
@@ -148,6 +150,18 @@ From within vi type:
 
 ## Set Tab to spaces and Tab Length
 
+```
+" Tabs
+set tabstop=4       " Change tab width. This will impact exiting text
+set shiftwidth=4    " Indent width used by reindent (<< and >>)
+set softtabstop=4   " Width when pressing TAB (if less than tabstops additional
+                    " tabs and spaces will be inserted to equal tabstops
+set expandtab       " Expand TABs to spaces
+set smarttab        " when using spaces instead of tabs, the backspace will
+                    " remove shiftwidth number of spaces, making it appear as
+                    " if there is an actual tab when there is not.  Without
+                    " the backspace removes a single space
+```
 
 ## Turn of annoying bell in vi
 
@@ -159,3 +173,16 @@ set visualbell
 ```
 Note how this config file uses a double quote for a comment
 
+## View in Hex mode
+
+In the editor enter the following to set hex mod
+
+```
+:%!xxd
+```
+
+and enter the following to return to normal mode
+
+```
+:%!xxd -r
+```
