@@ -26,6 +26,7 @@ Various notes on vi/vim editor
 * **:q!** - quit without savig while in **ex mode**
 * **:e!** - abandon changes reverting to the original file while in **command mode**
 
+
 ## Navigation
 
 Note: while you can navigate with the arrow keys, for efficiency you can use standard letter keys as well in **command mode**, so you don't have to lift your hands from the home keys.
@@ -42,6 +43,15 @@ Note: while you can navigate with the arrow keys, for efficiency you can use sta
 * **8gg** - move to line 8
 * **^f** - page down
 * **^b** - page up
+
+## Switching Between Multiple Files in Command Mode
+
+* **:n filename** - open a new file
+* **:e filename** - open an existing file if it exist, otherwise open a new file
+* **:n** - switch to the next file (if there are unsaved changes in current file you must save before switching)
+* **:N** or **:prev** - switch to the previous file (also must save changes first)
+
+Note: if you want to abandon changes, instead of saving, when switching between files you can enter **:e!** in command mode to revert to the saved version of the file, and then switch to the other file without vi complaining.
 
 ## Copy/Paste
 
