@@ -71,9 +71,10 @@ To move text you first delete it, which places the text in a buffer, and the pas
 **dd** - delete the line or lines with **#dd** that you want to move
 **p** - paste the deleted lines after the current line
 
-## Undoing Changes
+## Undoing/Redoing Changes
 
  * **u** - in **command mode** undo last change.  You can type **u** multiple times for multiple levels of undo
+ * **Ctrl-R** - redo the prior undo
  
 ## Deleting Text
  
