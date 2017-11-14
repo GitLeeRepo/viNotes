@@ -45,30 +45,31 @@ Note: while you can navigate with the arrow keys, for efficiency you can use sta
 
 ## Copy/Paste
 
-### Visual Mode
+### Visual Mode Copying
 
 * Position your cursor where you want to start copying text
 * **v** - in **command mode** to go into **Visual Mode**
 * Use the navigation keys to select the text that is hightlighted
 * **y** - to copy the selected text (yank), once yanked you return to **command mode**
 
-### Command Mode
+### Command Mode Copy (Yank) and Paste
 
 * **yy** - copy the current line
 * **6yy** - copy the next 6 lines
-* **p** - paste the yanked text at the current position
-* **2p** - repeat the paste 2 times
+* **p** - paste the yanked or deleted text **after** the current line
+* **P** - paste the yanked or deleted text **before** the current line
+* **2p** - repeat the paste 2 times after the current line.
 
 ### Ex Mode
 
 * **:put** - in **ex Mode** paste the text starting on the next line (saves from having to go in and out **Insert Mode** to open up a new line)
 
-## Moving Text
+## Moving Text (Cut and Paste)
 
 To move text you first delete it, which places the text in a buffer, and the paste it
 
 **dd** - delete the line or lines with **#dd** that you want to move
-**p** - put the deleted lines at the position after the cursor
+**p** - paste the deleted lines after the current line
 
 ## Undoing Changes
 
@@ -115,7 +116,7 @@ To move text you first delete it, which places the text in a buffer, and the pas
 
 * **.** - while in **command mode** repeats the prior command
 
-## Search of text
+## Search of text in command mode
 
 * **/pattern** - search forward through the text for the pattern
 * **?pattern** - search backward through the text for the pattern
@@ -123,6 +124,13 @@ To move text you first delete it, which places the text in a buffer, and the pas
 * **/** - repeat the search in the backward direction
 * **n** - repeat the search in the same direction
 * **N** - repeat the search in the opposite direction
+
+## Substitute text in Ex Mode
+
+Uses substitute to do search and replace using regular expressions
+
+* **:%s/oldtext/newtext/g** - search and replace in the entire file.  With the **/g** flags it will replace globally, and it will NOT prompt for confirmation.
+* **:%s/oldtext/newtext/gc** - search and replace in the entire file.  With the **/gc** flags it will replace globally, but it will prompt for each one.
 
 # vimrc and vi settings
 
@@ -186,3 +194,16 @@ and enter the following to return to normal mode
 ```
 :%!xxd -r
 ```
+
+# Working with Named Buffers
+
+You can have 26 (letters a through z) named buffers to store yanked and deleted text.  To use a named buffer in command mode, proceed the command with a double quote (**\"**) and the designated letter for that buffer.
+
+## Copying to Named Buffers
+
+* **\"ayy** - yank a single line to buffer **a**
+* **\"b4yy** - yank four lines to buffer **b**
+
+## Pasting from Named Buffers
+* **\"ap** - paste from buffer **a**
+* **\"b2p** - paste twice from buffer **b**
