@@ -1,3 +1,8 @@
+"  
+" Modified: Wed 15 Nov 2017 12:00:24 AM UTC 
+" use: press <F3> to insert timestamp (assuming <F3> is defined below)
+"      otherwise ':!r date' to insert date/time (doesn't work in insert mode like <F3>)
+
 syntax on
 
 colorscheme koehler
@@ -14,4 +19,12 @@ set expandtab       " Expand TABs to spaces
 set smarttab        " when using spaces instead of tabs, the backspace will
                     " remove shiftwidth number of spaces, making it appear as
                     " if there is an actual tab when there is not.  Without
-                    " the backspace removes  single space
+                    " the backspace removes a single space
+
+" Wrap
+set nowrap
+
+" Define Keys - <F3> Insert Timestamp (both insert and command mode)
+:nnoremap <F3> "=strftime("%c")<CR>P        
+:inoremap <F3> <C-R>=strftime("%c")<CR>
+
