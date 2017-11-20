@@ -182,16 +182,6 @@ set smarttab        " when using spaces instead of tabs, the backspace will
                     " the backspace removes a single space
 ```
 
-## Turn of annoying bell in vi
-
-By default the bell sounds whenever you move to the top, bottom, left side of file, which gets really annoying.  To turn it off edit the .vimrc file in the home directory adding the following:
-
-```
-" Turn annoying bell off
-set visualbell
-```
-Note how this config file uses a double quote for a comment
-
 ## View in Hex mode
 
 In the editor enter the following to set hex mod
@@ -218,3 +208,15 @@ You can have 26 (letters a through z) named buffers to store yanked and deleted 
 ## Pasting from Named Buffers
 * **\"ap** - paste from buffer **a**
 * **\"b2p** - paste twice from buffer **b**
+
+## Turn off annoying bell in vi
+
+By default the bell sounds whenever you move to the top, bottom, left side of file, which gets really annoying.  To turn it off edit the .vimrc file in the home directory adding the following:
+
+```
+" Turn annoying bell off
+set visualbell
+```
+Note how this config file uses a double quote for a comment
+
+
