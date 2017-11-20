@@ -5,7 +5,14 @@
 
 syntax on
 
-colorscheme koehler
+" I like: koehler, murphy, ron, slate, torte
+colorscheme ron
+
+augroup custom_Settings
+    autocmd FileType c source ~/vim/c_settings.vim
+    autocmd FileType asm source ~/vim/asm_settings.vim
+    autocmd FileType sh source ~/vim/sh_settings.vim
+augroup END
 
 " turn annoying bell off
 set visualbell
