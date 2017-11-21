@@ -50,8 +50,13 @@ Note: while you can navigate with the arrow keys, for efficiency you can use sta
 * **:e filename** - open an existing file if it exist, otherwise open a new file
 * **:n** - switch to the next file (if there are unsaved changes in current file you must save before switching)
 * **:N** or **:prev** - switch to the previous file (also must save changes first)
+* **:e #** - switch to the prior file (note the **#** is a literal and NOT a placeholder for a number).  The **#** symbol is referred to as the **alternate file**.  You use the percent symbol **%** to refer to the current file.
 
 Note: if you want to abandon changes, instead of saving, when switching between files you can enter **:e!** in command mode to revert to the saved version of the file, and then switch to the other file without vi complaining.
+
+### Considerations when using multiple files
+
+If you open multiple files from the command line, you can switch back and forth between them with **:n** and **:N**.  However, if you have one file open, and open another file within vi with **:e filename** you can no longer swich between them using **:n** an **:N** (it will say the new file is the only file).  You can switch back to the other file by entering **:e #** (not a place holder, enter the literal #).  It has a different behavior when you start with multiple files and then open a new file with **:e filename**, you can now switch back with **:n** to the other files, but you no longer have access to the file you opened with **e:**
 
 ## Copy/Paste
 
