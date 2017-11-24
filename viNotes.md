@@ -162,6 +162,16 @@ Place in .vimrc or enter the following in ex mode:
 
 Place the cursor on the word you want highlighted and type **\*** (asterisk) in command mode.  This will highlight every occurance of the word in the file.
 
+## Code Completion
+
+Type **Ctrl-N** on the word to do code completion, for those languages that are supported.
+
+## Follow Files
+
+In command mode highlight a header file or another file and type **gf** and it will go to that file if it is on the path (include files should be)
+
+Highlight C word that is defined in a header file and type **\[i** to display the header definition in bottom status area, or type **\[\<tab\>** to jump to the definition in the header file.
+
 # vimrc and vi settings
 
 Examples of both .vimrc settings and settings made in the editor **:** mode
