@@ -148,6 +148,20 @@ Uses substitute to do search and replace using regular expressions
 * **:%s/oldtext/newtext/g** - search and replace in the entire file.  With the **/g** flags it will replace globally, and it will NOT prompt for confirmation.
 * **:%s/oldtext/newtext/gc** - search and replace in the entire file.  With the **/gc** flags it will replace globally, but it will prompt for each one.
 
+## Search and Word Under Cursor Highlighting
+
+### Search Highlight
+
+Place in .vimrc or enter the following in ex mode:
+
+```
+:set hlsearch
+```
+
+### Word Under Cursor Highlighting
+
+Place the cursor on the word you want highlighted and type **\*** (asterisk) in command mode.  This will highlight every occurance of the word in the file.
+
 # vimrc and vi settings
 
 Examples of both .vimrc settings and settings made in the editor **:** mode
