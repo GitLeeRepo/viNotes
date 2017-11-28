@@ -132,6 +132,19 @@ To move text you first delete it, which places the text in a buffer, and the pas
 
 * **.** - while in **command mode** repeats the prior command
 
+## Goto Line Number
+
+* From the command line:
+
+To go to line 33 when the file is opened:
+
+```bash
+vi +33 myfile.c
+```
+
+* In **command mode** - type the line number and then press **shift-g**
+* In **Ex mode** - type **:33** to goto line 33
+
 ## Search of text in command mode
 
 * **/pattern** - search forward through the text for the pattern
