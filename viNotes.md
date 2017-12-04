@@ -185,6 +185,10 @@ In command mode highlight a header file or another file and type **gf** and it w
 
 Highlight C word that is defined in a header file and type **\[i** to display the header definition in bottom status area, or type **\[\<tab\>** to jump to the definition in the header file.
 
+## Column Mode
+
+To place vim in column mode press **Ctrl-V**, which is similar to **visual mode** in that it starts to hightlight text as you move the mouse, with the difference being it does so in column mode.  Once you copy or delete/cut the text it will then also paste in a column oriented manner when using **p** in command mode.  You may have to go into **insert mode** to get things possitioned first.
+
 # vimrc and vi settings
 
 Examples of both .vimrc settings and settings made in the editor **:** mode
