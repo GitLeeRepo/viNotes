@@ -182,12 +182,12 @@ Place the cursor on the word you want highlighted and type **\*** (asterisk) in 
 
 ### Unhighlight
 
-To unhighlight the matched searches enter **:hup** in **ex mode**.  Hightlighting will be removed until the next search.
+To unhighlight the matched searches enter **:noh** in **ex mode**.  Hightlighting will be removed until the next search.
 
 Unhighlight until the next search (**ex mode** in vim:
 
 ```
-:hup
+:noh
 ```
 
 To turn it off:
