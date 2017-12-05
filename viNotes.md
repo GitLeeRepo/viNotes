@@ -161,6 +161,11 @@ Uses substitute to do search and replace using regular expressions
 * **:%s/oldtext/newtext/g** - search and replace in the entire file.  With the **/g** flags it will replace globally, and it will NOT prompt for confirmation.
 * **:%s/oldtext/newtext/gc** - search and replace in the entire file.  With the **/gc** flags it will replace globally, but it will prompt for each one.
 
+### Substitute from the current position to the end of the file
+
+* **:,$s/oldtext/newtext/g** - search and replace from the current position to the end of the file.  With the **/g** flags it will replace globally, and it will NOT prompt for confirmation.
+* **:,$s/oldtext/newtext/gc** - search and replace from the current position to the end of the file.  With the **/gc** flags it will replace globally, but it will prompt for each one.
+
 ## Highlighting Search and Word Under Cursor 
 
 ### Search Highlight
