@@ -75,7 +75,11 @@ If you open multiple files from the command line, you can switch back and forth 
 * **P** - paste the yanked or deleted text **before** the current line
 * **2p** - repeat the paste 2 times after the current line.
 
-### Ex Mode
+### Ex Mode Copy Range
+
+* **:20,70y** - yank 51 lines starting at and including line 20 through and including line 70.
+
+### Ex Mode Put
 
 * **:put** - in **ex Mode** paste the text starting on the next line (saves from having to go in and out **Insert Mode** to open up a new line)
 
