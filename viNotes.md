@@ -1,5 +1,4 @@
 # Overview
-
 Various notes on vi/vim editor
 
 # Site links
@@ -56,7 +55,7 @@ Note: if you want to abandon changes, instead of saving, when switching between 
 
 ### Considerations when using multiple files
 
-If you open multiple files from the command line, you can switch back and forth between them with **:n** and **:N**.  However, if you have one file open, and open another file within vi with **:e filename** you can no longer swich between them using **:n** an **:N** (it will say the new file is the only file).  You can switch back to the other file by entering **:e #** (not a place holder, enter the literal #).  It has a different behavior when you start with multiple files and then open a new file with **:e filename**, you can now switch back with **:n** to the other files, but you no longer have access to the file you opened with **e:**
+If you open multiple files from the command line, you can switch back and forth between them with **:n** and **:N**.  However, if you have one file open, and open another file within vi with **:e filename** you can no longer switch between them using **:n** an **:N** (it will say the new file is the only file).  You can switch back to the other file by entering **:e #** (not a place holder, enter the literal #).  It has a different behavior when you start with multiple files and then open a new file with **:e filename**, you can now switch back with **:n** to the other files, but you no longer have access to the file you opened with **e:**
 
 ## Copy/Paste
 
@@ -263,7 +262,7 @@ set smarttab        " when using spaces instead of tabs, the backspace will
                     " the backspace removes a single space
 ```
 
-## Spellchecking Configuration
+## Spell checking Configuration
 
 ```
 " Spellcheck
@@ -275,15 +274,24 @@ Note this adds the **spellfile**, which has the custom words you added (by selec
 To activate spell check withing a vi session, in **ex mode** enter:
 
 ```
-:set spell
+:setlocal spell    # for the local buffer only
+
+
+:set spell         # for all buffers
+
+:set nospell       # turn spell checking off
 ```
 
-To mark a word good (adding it to your spellfile) and to jump to the next misspelled word enter the following in **command mode**
+To mark a word good (adding it to your spellfile), to jump to the next or previous misspelled word, to get a list of suggestions, enter the following in **command mode**
 
 ```
-zg    # mark word as good
+zg    # mark selected word as good
 
-Js    # jump to next misspelled word
+]s    # jump to next misspelled word
+
+[s    # jump to the previous misspelled word
+
+z=    # get a list of suggested corrections on selected misspelled word
 ```
 
 ## View in Hex mode
