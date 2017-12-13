@@ -263,6 +263,29 @@ set smarttab        " when using spaces instead of tabs, the backspace will
                     " the backspace removes a single space
 ```
 
+## Spellchecking Configuration
+
+```
+" Spellcheck
+set spelllang=en
+set spellfile=$HOME/source/repos/viNotes/spellcheck/en.utf-8.add
+```
+Note this adds the **spellfile**, which has the custom words you added (by selecting the word in command mode and typing **gz** to mark it good), to the repo directory so that it can be used accross computers.
+
+To activate spell check withing a vi session, in **ex mode** enter:
+
+```
+:set spell
+```
+
+To mark a word good (adding it to your spellfile) and to jump to the next misspelled word enter the following in **command mode**
+
+```
+zg    # mark word as good
+
+Js    # jump to next misspelled word
+```
+
 ## View in Hex mode
 
 In the editor enter the following to set hex mod
