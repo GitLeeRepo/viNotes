@@ -45,3 +45,5 @@ augroup END
 :inoremap <F3> <C-R>=strftime("%c")<CR>
 " <F4> toggle hightlighting of searches on and off
 nnoremap <F4> :set hlsearch!<CR>
+" <F5> turn spell check on
+nnoremap <F5> :set spell<CR>
