@@ -313,3 +313,6 @@ Banas
 expr1
 expr2
 whitespace
+eth0
+netmasks
+netmask
