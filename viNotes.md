@@ -9,7 +9,7 @@ Various notes on vi/vim editor
 # vi Modes
 
 * **Command Mode** - for entering commands.  Press **Esc** to enter Command Mode
-* **Insert Mode** - for entering text.  Type **i** to enter Insert Mode.  Note there an overstrike version called **replace mode**, but for the purposes of distinguishing behaviors of key strokes, it is **insert mode** that will be contrasted with other modes in these notes.
+* **Insert Mode** - for entering text.  Type **i** to enter Insert Mode.  Note there is an over strike version called **replace mode**, but for the purposes of distinguishing behaviors of key strokes, it is **insert mode** that will be contrasted with other modes in these notes.
 * **ex Mode** - technically not a mode, but a separate line editor.  Type **:** (colon) to activate
 
 # Commands
@@ -23,7 +23,7 @@ Various notes on vi/vim editor
 
 ## Abandon Changes
 
-* **:q!** - quit without savig while in **ex mode**
+* **:q!** - quit without saving while in **ex mode**
 * **:e!** - abandon changes reverting to the original file while in **command mode**
 
 
@@ -64,7 +64,7 @@ If you open multiple files from the command line, you can switch back and forth 
 
 * Position your cursor where you want to start copying text
 * **v** - in **command mode** to go into **Visual Mode**
-* Use the navigation keys to select the text that is hightlighted
+* Use the navigation keys to select the text that is highlighted
 * **y** - to copy the selected text (yank), once yanked you return to **command mode**
 
 ### Command Mode Copy (Yank) and Paste
@@ -126,7 +126,7 @@ To move text you first delete it, which places the text in a buffer, and the pas
 * **A** - enter **insert mode** at the end of the line
 * **s** - replace the character under the cursor and enter **insert mode** (**x** replaces without entering **insert mode**
 * **S** - remove the entire line placing you in **insert mode** at the beginning of the line
-* **R** - places you in **replace mode** which is an overstrike version of **insert mode** (note you can toggle back and forth between **insert mode** and **replace mode** with your insert key.
+* **R** - places you in **replace mode** which is an over strike version of **insert mode** (note you can toggle back and forth between **insert mode** and **replace mode** with your insert key.
 
 ## Joining Lines
 
@@ -184,7 +184,7 @@ Place in .vimrc or enter the following in ex mode:
 
 Place the cursor on the word you want highlighted and type **\*** (asterisk) in command mode.  This will highlight every occurance of the word in the file.
 
-### Unhighlight
+### Remove highlight
 
 To unhighlight the matched searches enter **:noh** in **ex mode**.  Hightlighting will be removed until the next search.
 

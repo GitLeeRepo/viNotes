@@ -15,6 +15,10 @@ colorscheme ron
 " turn annoying bell off
 set visualbell
 
+" Spellcheck
+set spelllang=en
+set spellfile=$HOME/source/repos/viNotes/spellcheck/en.utf-8.add
+
 " Default Tabs (check augroup for lang specific settings)
 set tabstop=4       " Change tab width. This will impact exiting text
 set shiftwidth=4    " Indent width used by reindent (<< and >>)
@@ -39,4 +43,5 @@ augroup END
 " Define Keys - <F3> Insert Timestamp (both insert and command mode)
 :nnoremap <F3> "=strftime("%c")<CR>P        
 :inoremap <F3> <C-R>=strftime("%c")<CR>
-
+" <F4> toggle hightlighting of searches on and off
+nnoremap <F4> :set hlsearch!<CR>
