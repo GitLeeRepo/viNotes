@@ -1,4 +1,4 @@
-colorscheme ron
+colorscheme slate
 
 " Spellcheck
 set spell
