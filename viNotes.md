@@ -264,6 +264,8 @@ set smarttab        " when using spaces instead of tabs, the backspace will
 
 ## Spell checking Configuration
 
+For a detailed list of spell checking options refer to [this documentation](http://vimhelp.appspot.com/spell.txt.html#spell)
+
 ```
 " Spellcheck
 set spelllang=en
