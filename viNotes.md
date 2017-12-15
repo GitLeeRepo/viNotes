@@ -181,13 +181,13 @@ Place in .vimrc or enter the following in ex mode:
 
 ### Word Under Cursor Highlighting
 
-Place the cursor on the word you want highlighted and type **\*** (asterisk) in command mode.  This will highlight every occurance of the word in the file.
+Place the cursor on the word you want highlighted and type **\*** (asterisk) in command mode.  This will highlight every occurrence of the word in the file.
 
 ### Remove highlight
 
-To unhighlight the matched searches enter **:noh** in **ex mode**.  Hightlighting will be removed until the next search.
+To un-highlight the matched searches enter **:noh** in **ex mode**.  Highlighting will be removed until the next search.
 
-Unhighlight until the next search (**ex mode** in vim:
+Un-highlight until the next search (**ex mode** in vim:
 
 ```
 :noh
@@ -221,7 +221,7 @@ Highlight C word that is defined in a header file and type **\[i** to display th
 
 ## Column Mode
 
-To place vim in column mode press **Ctrl-V**, which is similar to **visual mode** in that it starts to hightlight text as you move the mouse, with the difference being it does so in column mode.  Once you copy or delete/cut the text it will then also paste in a column oriented manner when using **p** in command mode.  You may have to go into **insert mode** to get things possitioned first.
+To place vim in column mode press **Ctrl-V**, which is similar to **visual mode** in that it starts to highlight text as you move the mouse, with the difference being it does so in column mode.  Once you copy or delete/cut the text it will then also paste in a column oriented manner when using **p** in command mode.  You may have to go into **insert mode** to get things positioned first.
 
 # vimrc and vi settings
 
@@ -252,7 +252,7 @@ From within vi type:
 ```
 " Tabs
 set tabstop=4       " Change tab width. This will impact exiting text
-set shiftwidth=4    " Indent width used by reindent (<< and >>)
+set shiftwidth=4    " Indent width used by re-indent (<< and >>)
 set softtabstop=4   " Width when pressing TAB (if less than tabstops additional
                     " tabs and spaces will be inserted to equal tabstops
 set expandtab       " Expand TABs to spaces
@@ -271,7 +271,7 @@ For a detailed list of spell checking options refer to the [Vim Reference Manual
 set spelllang=en
 set spellfile=$HOME/source/repos/viNotes/spellcheck/en.utf-8.add
 ```
-Note this adds the **spellfile**, which has the custom words you added (by selecting the word in command mode and typing **gz** to mark it good), to the repo directory so that it can be used accross computers.
+Note this adds the **spellfile**, which has the custom words you added (by selecting the word in command mode and typing **gz** to mark it good), to the repo directory so that it can be used across computers.
 
 To activate spell check withing a vi session, in **ex mode** enter:
 
