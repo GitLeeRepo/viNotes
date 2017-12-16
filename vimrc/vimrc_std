@@ -39,6 +39,7 @@ augroup custom_Settings
     autocmd FileType sh source ~/vim/sh_settings.vim
     autocmd FileType make source ~/vim/make_settings.vim
     autocmd FileType markdown source ~/vim/markdown_settings.vim
+    autocmd FileType python source ~/vim/python_settings.vim
 augroup END
 
 " Define Keys - <F3> Insert Timestamp (both insert and command mode)
