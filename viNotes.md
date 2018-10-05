@@ -97,43 +97,45 @@ To move text you first delete it, which places the text in a buffer, and the pas
 ## Deleting Text
  
 ### Command mode
- * **dd** - deletes the current line
- * **6dd** - deletes 6 lines
- * **dw** - delete to the end of the word
- * **d$** - delete to the end of the line
- * **d0** - delete to the beginning of the line
- * **x** - deletes the character under the cursor
+ * **dd** -- deletes the current line
+ * **6dd** -- deletes 6 lines
+ * **dw** -- delete to the end of the word
+ * **d$** -- delete to the end of the line
+ * **d0** -- delete to the beginning of the line
+ * **dG** -- delete from current line to end of file
+ * **dgg** -- delete from current line to the beginning of file
+ * **x** -- deletes the character under the cursor
  
 ### Ex mode
 
-* **:d** - deletes the current line 
-* **:d3** - deletes the next 3 lines 
+* **:d** -- deletes the current line 
+* **:d3** -- deletes the next 3 lines 
 
 ## Changing Text
 
-* **cw** - from the current position remove text to the end of the current word placing you in **insert mode** to type the new text
-* **c$** - from the current position remove text to the end of the current line placing you in **insert mode** to type the new text
-* **c0** - from the current position remove text to the beginning of the current line placing you in **insert mode** at the beginning of the line
-* **cc** - replace the entire current line
-* **r** - replace the character under the cursor.  You remain in command mode so you don't need to hit **Esc** afterword
+* **cw** -- from the current position remove text to the end of the current word placing you in **insert mode** to type the new text
+* **c$** -- from the current position remove text to the end of the current line placing you in **insert mode** to type the new text
+* **c0** -- from the current position remove text to the beginning of the current line placing you in **insert mode** at the beginning of the line
+* **cc** -- replace the entire current line
+* **r** -- replace the character under the cursor.  You remain in command mode so you don't need to hit **Esc** afterword
 
 ## Inserting Text
 
-* **i** - enter **insert mode**
-* **I** - enter **insert mode** at the start of the line
-* **a** - enter **insert mode** to append text (one character to the right of where the **i** command would have placed you
-* **A** - enter **insert mode** at the end of the line
-* **s** - replace the character under the cursor and enter **insert mode** (**x** replaces without entering **insert mode**
-* **S** - remove the entire line placing you in **insert mode** at the beginning of the line
-* **R** - places you in **replace mode** which is an over strike version of **insert mode** (note you can toggle back and forth between **insert mode** and **replace mode** with your insert key.
+* **i** -- enter **insert mode**
+* **I** -- enter **insert mode** at the start of the line
+* **a** -- enter **insert mode** to append text (one character to the right of where the **i** command would have placed you
+* **A** -- enter **insert mode** at the end of the line
+* **s** -- replace the character under the cursor and enter **insert mode** (**x** replaces without entering **insert mode**
+* **S** -- remove the entire line placing you in **insert mode** at the beginning of the line
+* **R** -- places you in **replace mode** which is an over strike version of **insert mode** (note you can toggle back and forth between **insert mode** and **replace mode** with your insert key.
 
 ## Joining Lines
 
-* **J** - in **command mode** joins two lines together
+* **J** -- in **command mode** joins two lines together
 
 ## Repeating Commands
 
-* **.** - while in **command mode** repeats the prior command
+* **.** -- while in **command mode** repeats the prior command
 
 ## Goto Line Number
 
@@ -145,29 +147,29 @@ To move text you first delete it, which places the text in a buffer, and the pas
   vi +33 myfile.c
   ```
 
-* In **command mode** - type the line number and then press **shift-g**
-* In **Ex mode** - type **:33** to goto line 33
+* In **command mode** -- type the line number and then press **shift-g**
+* In **Ex mode** -- type **:33** to goto line 33
 
 ## Search of text in command mode
 
-* **/pattern** - search forward through the text for the pattern
-* **?pattern** - search backward through the text for the pattern
-* **/** - repeat the search in the forward direction
-* **/** - repeat the search in the backward direction
-* **n** - repeat the search in the same direction
-* **N** - repeat the search in the opposite direction
+* **/pattern** -- search forward through the text for the pattern
+* **?pattern** -- search backward through the text for the pattern
+* **/** -- repeat the search in the forward direction
+* **/** -- repeat the search in the backward direction
+* **n** -- repeat the search in the same direction
+* **N** -- repeat the search in the opposite direction
 
 ## Substitute text in Ex Mode
 
 Uses substitute to do search and replace using regular expressions
 
-* **:%s/oldtext/newtext/g** - search and replace in the entire file.  With the **/g** flags it will replace globally, and it will NOT prompt for confirmation.
-* **:%s/oldtext/newtext/gc** - search and replace in the entire file.  With the **/gc** flags it will replace globally, but it will prompt for each one.
+* **:%s/oldtext/newtext/g** -- search and replace in the entire file.  With the **/g** flags it will replace globally, and it will NOT prompt for confirmation.
+* **:%s/oldtext/newtext/gc** -- search and replace in the entire file.  With the **/gc** flags it will replace globally, but it will prompt for each one.
 
 ### Substitute from the current position to the end of the file
 
-* **:,$s/oldtext/newtext/g** - search and replace from the current position to the end of the file.  With the **/g** flags it will replace globally, and it will NOT prompt for confirmation.
-* **:,$s/oldtext/newtext/gc** - search and replace from the current position to the end of the file.  With the **/gc** flags it will replace globally, but it will prompt for each one.
+* **:,$s/oldtext/newtext/g** -- search and replace from the current position to the end of the file.  With the **/g** flags it will replace globally, and it will NOT prompt for confirmation.
+* **:,$s/oldtext/newtext/gc** -- search and replace from the current position to the end of the file.  With the **/gc** flags it will replace globally, but it will prompt for each one.
 
 ## Highlighting Search and Word Under Cursor 
 
@@ -316,12 +318,12 @@ You can have 26 (letters a through z) named buffers to store yanked and deleted 
 
 ## Copying to Named Buffers
 
-* **\"ayy** - yank a single line to buffer **a**
-* **\"b4yy** - yank four lines to buffer **b**
+* **\"ayy** -- yank a single line to buffer **a**
+* **\"b4yy** -- yank four lines to buffer **b**
 
 ## Pasting from Named Buffers
-* **\"ap** - paste from buffer **a**
-* **\"b2p** - paste twice from buffer **b**
+* **\"ap** -- paste from buffer **a**
+* **\"b2p** -- paste twice from buffer **b**
 
 ## Turn off annoying bell in vi
 
@@ -332,5 +334,4 @@ By default the bell sounds whenever you move to the top, bottom, left side of fi
 set visualbell
 ```
 Note how this config file uses a double quote for a comment
-
 
