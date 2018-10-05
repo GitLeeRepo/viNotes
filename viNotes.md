@@ -101,7 +101,7 @@ To move text you first delete it, which places the text in a buffer, and the pas
  * **6dd** - deletes 6 lines
  * **dw** - delete to the end of the word
  * **d$** - delete to the end of the line
- * **d0** - delete to the end of the line
+ * **d0** - delete to the beginning of the line
  * **x** - deletes the character under the cursor
  
 ### Ex mode
