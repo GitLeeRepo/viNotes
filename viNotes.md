@@ -42,6 +42,8 @@ Note: while you can navigate with the arrow keys, for efficiency you can use sta
 * **8gg** - move to line 8
 * **^f** - page down
 * **^b** - page up
+* **G** - move to the end of the file
+* **gg** - move to the beginning of the file
 
 ## Switching Between Multiple Files in Command Mode
 
