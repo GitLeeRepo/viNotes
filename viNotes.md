@@ -163,10 +163,11 @@ To move text you first delete it, which places the text in a buffer, and the pas
 
 ## Substitute text in Ex Mode
 
-Uses substitute to do search and replace using regular expressions
+Uses **substitute** to do **search and replace** using regular expressions
 
-* **:%s/oldtext/newtext/g** -- search and replace in the entire file.  With the **/g** flags it will replace globally, and it will NOT prompt for confirmation.
+* **:%s/oldtext/newtext** or **:%s/oldtext/newtext/g** -- search and replace in the entire file.  With the **/g** flags or no flag specified it will replace globally, and it will NOT prompt for confirmation.
 * **:%s/oldtext/newtext/gc** -- search and replace in the entire file.  With the **/gc** flags it will replace globally, but it will prompt for each one.
+* **:s/oldtext/newtext** -- without the **%** in front of the **s** it will replace on the **current line only**.
 
 ### Substitute from the current position to the end of the file
 
