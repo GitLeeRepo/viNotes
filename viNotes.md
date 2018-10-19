@@ -338,3 +338,9 @@ set visualbell
 ```
 Note how this config file uses a double quote for a comment
 
+This can also be set within **vi command mode** but it will only apply to that session:
+
+```
+:set visualbell
+```
+
